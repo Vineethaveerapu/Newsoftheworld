@@ -1,16 +1,11 @@
+import Header from "./components/Header";
 
-import './App.css'
-import { articles} from './data/data'
-import { getImageUrl } from './utils/functions'
-
-function App(){
-  return(
+function App() {
+  return (
     <>
-    {articles.map((item, index) =><img key = {index} src ={getImageUrl(item.image)}>
-
-    </img>)}
+      <Header />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
