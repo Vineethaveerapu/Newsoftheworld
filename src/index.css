@@ -2,6 +2,17 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary-color: #000;
+  --secondary-color: #fff;
+
+  --page-margin: 1vw;
+
+  @media (min-width: 768px) {
+    --page-margin: 5vw;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;

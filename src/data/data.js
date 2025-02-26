@@ -39,7 +39,7 @@ export const articles = [
     "Nebula Odyssey red carpet",
     "Spectacular New Sci-Fi Film Takes Audiences on a Thrilling Journey Through Space and Time",
     `In a cinematic event that has sci-fi fans buzzing with excitement, the highly anticipated film "Nebula Odyssey" has finally hit theaters. Directed by acclaimed filmmaker Ava Lin, this visually stunning masterpiece promises to transport audiences to new dimensions with its mesmerizing special effects and captivating storyline. Set in a distant future where humanity has colonized distant planets and unlocked the secrets of interstellar travel, "Nebula Odyssey" follows the epic journey of a group of intrepid explorers as they embark on a mission to uncover the mysteries of a newly discovered alien civilization. As they navigate treacherous wormholes and face off against otherworldly creatures, the crew must confront their inner demons and forge unlikely alliances in order to survive. With a star-studded cast featuring veteran actors and up-and-coming talents, "Nebula Odyssey" delivers a compelling blend of heart-pounding action, mind-bending twists, and poignant moments that will resonate with audiences of all ages. The film's groundbreaking visual effects, created by a team of award-winning artists, bring to life dazzling spacecraft, exotic alien worlds, and breathtaking cosmic phenomena that will leave viewers awestruck. Critics have already hailed "Nebula Odyssey" as a cinematic triumph, praising its visionary storytelling, dynamic performances, and seamless integration of cutting-edge technology. From its pulse-pounding space battles to its poignant character arcs, the film has been lauded as a work of art that pushes the boundaries of the sci-fi genre and sets a new standard for cinematic storytelling. As audiences flock to theaters to experience "Nebula Odyssey" for themselves, anticipation is running high for what promises to be a thrilling and unforgettable journey through the cosmos. Don't miss your chance to be a part of cinematic history—grab your tickets now and prepare to be swept away on a voyage of discovery and wonder in "Nebula Odyssey."`,
-    "scifi.jeg",
+    "scifi.jpeg",
     "entertainment"
   ),
   new Article(
@@ -188,5 +188,5 @@ export const articles = [
     `The [Theater Group Name] is excited to announce the upcoming debut of their new play, "[Play Title]." The play, written by local playwright [Playwright's Name], tells the story of [brief plot summary]. "We are thrilled to be able to bring this new play to our community," said [Theater Group Director's Name]. "It's a powerful and moving story that we think will resonate with audiences of all ages." The play will be performed at the [Theater Name] from [Start Date] to [End Date]. Tickets are on sale now and can be purchased online or at the box office. For more information, please visit the theater group's website at [Website Address].`,
     "theatre.jpeg",
     "entertainment"
-  ),
+  )
 ];
