@@ -1,0 +1,13 @@
+.breakingNews {
+  border: 2px solid var(--primary-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.breakingNewsTitle {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 1rem;
+}
