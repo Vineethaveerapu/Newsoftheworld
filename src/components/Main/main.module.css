@@ -1,0 +1,27 @@
+.card {
+  border: 2px solid rgb(14, 14, 14);
+  padding: 1rem;
+}
+
+.cardImage {
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+.cardContent {
+  padding: 1rem 0;
+}
+
+.cardTitle {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.cardDescription {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}

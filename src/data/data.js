@@ -6,7 +6,7 @@ function Article(headline, deck, story, image, category) {
   this.category = category;
 }
 
-export const articles = [
+const articles = [
   new Article(
     "Football Match Ends in Draw",
     "The highly anticipated football match between ended in a draw last night",
@@ -190,3 +190,25 @@ export const articles = [
     "entertainment"
   )
 ];
+
+const getArticlesInCategory = (categoryName, random = false) => {
+  const filteredArticles = articles.filter((item) => {
+    const { category } = item;
+
+    if (categoryName === category) {
+      return true;
+    }
+    return false;
+  });
+
+  if (random) {
+    return filteredArticles.sort(() => Math.random() - 0.5);
+  }
+
+  return filteredArticles;
+};
+
+// const sportsArticles = getArticlesInCategory("sports", true);
+// console.log("sportsArticles", sportsArticles);
+
+export { articles, getArticlesInCategory };
