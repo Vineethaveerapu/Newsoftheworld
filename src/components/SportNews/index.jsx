@@ -1,13 +1,10 @@
 import styles from "./sportNews.module.css";
 import { getImageUrl } from "../../utils/functions";
-import { sportArticles } from "../../data/data.js";
 
-function SportNews({ className = "" }) {
-  const twoArticles = sportArticles.slice(0, 2);
-  // console.log("twoArticles", twoArticles);
+function SportNews({ articles }) {
   return (
-    <div className={`${styles.sportNews} ${className}`}>
-      {twoArticles.map((item) => {
+    <div className={`${styles.sportNews} `}>
+      {articles?.map((item) => {
         const { image, headline, deck } = item;
         return (
           <div className={styles.content} key={headline}>

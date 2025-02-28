@@ -1,12 +1,9 @@
 import styles from "./headlines.module.css";
-import { articles } from "../../data/data";
 
-const threeArticles = articles.slice(0, 3);
-
-function Headlines() {
+function Headlines({ articles }) {
   return (
     <div className={styles.headlines}>
-      {threeArticles.map((article) => (
+      {articles?.map((article) => (
         <div key={article.headline} className={styles.headline}>
           {article.headline}
         </div>

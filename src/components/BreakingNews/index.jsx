@@ -1,11 +1,11 @@
-import styles from "./breakingnews.module.css";
+import styles from "./breakingNews.module.css";
 import Headlines from "../Headlines";
 
-function BreakingNews() {
+function BreakingNews({ articles }) {
   return (
     <div className={styles.breakingNews}>
       <div className={styles.breakingNewsTitle}>Breaking News</div>
-      <Headlines />
+      <Headlines articles={articles} />
     </div>
   );
 }

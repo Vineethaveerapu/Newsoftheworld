@@ -5,30 +5,43 @@ import BreakingNews from "./components/BreakingNews";
 import styles from "./app.module.css";
 import Featured from "./components/Featured";
 import CategoryNews from "./components/CategoryNews";
-import {
-  sportArticles,
-  swedenArticles,
-  crimeArticles,
-  worldArticles,
-  entertainmentArticles
-} from "./data/data";
+import { getArticlesInCategory } from "./data/data";
 
 function App() {
+  const sportArticles = getArticlesInCategory("sport", true);
+  const swedenArticles = getArticlesInCategory("sweden", true);
+  const crimeArticles = getArticlesInCategory("crime", true);
+  const worldArticles = getArticlesInCategory("world", true);
+  const entertainmentArticles = getArticlesInCategory("entertainment", true);
+
+  const worldThree = worldArticles.slice(0, 3);
+  const swedenThree = swedenArticles.slice(0, 3);
+  const crimeThree = crimeArticles.slice(0, 3);
+  const entertainmentThree = entertainmentArticles.slice(0, 3);
+  const sportThree = sportArticles.slice(0, 3);
+
+  const featuredNews = [
+    ...worldArticles.slice(3, 6),
+    ...swedenArticles.slice(3, 6),
+    ...crimeArticles.slice(3, 6)
+  ];
+  const featuredSports = [...sportArticles.slice(4, 6)];
+
   return (
     <div className={styles.app}>
       <Header />
       <NavBar />
       <main className={styles.content}>
-        <BreakingNews />
-        <Featured />
-        <CategoryNews title="world" articles={worldArticles.slice(0, 3)} />
-        <CategoryNews title="sweden" articles={swedenArticles.slice(0, 3)} />
-        <CategoryNews title="crime" articles={crimeArticles.slice(0, 3)} />
-        <CategoryNews
-          title="entertainment"
-          articles={entertainmentArticles.slice(0, 3)}
+        <BreakingNews articles={worldArticles} />
+        <Featured
+          featuredNews={featuredNews.slice(0, 5)}
+          featuredSports={featuredSports.slice(0, 2)}
         />
-        <CategoryNews title="sport" articles={sportArticles.slice(0, 3)} />
+        <CategoryNews title="world" articles={worldThree} />
+        <CategoryNews title="sweden" articles={swedenThree} />
+        <CategoryNews title="crime" articles={crimeThree} />
+        <CategoryNews title="entertainment" articles={entertainmentThree} />
+        <CategoryNews title="sport" articles={sportThree} />
       </main>
 
       <Footer />
