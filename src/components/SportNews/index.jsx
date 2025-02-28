@@ -1,9 +1,9 @@
 import styles from "./sportNews.module.css";
 import { getImageUrl } from "../../utils/functions";
-import { sportsArticles } from "../../data/data.js";
+import { sportArticles } from "../../data/data.js";
 
 function SportNews({ className = "" }) {
-  const twoArticles = sportsArticles.slice(0, 2);
+  const twoArticles = sportArticles.slice(0, 2);
   // console.log("twoArticles", twoArticles);
   return (
     <div className={`${styles.sportNews} ${className}`}>

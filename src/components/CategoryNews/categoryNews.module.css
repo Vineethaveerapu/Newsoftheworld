@@ -1,0 +1,14 @@
+.articles {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.item {
+  max-width: calc(33% - 10px);
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
