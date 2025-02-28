@@ -9,3 +9,7 @@
 ## Boilerplate
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+
+```sh
+git rm -r --cached . && git add . && git commit -m "Remove all cache and commit changes"
+```
