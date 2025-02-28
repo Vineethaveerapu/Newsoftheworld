@@ -1,11 +1,11 @@
 import styles from "./recent.module.css";
 import RecentArticle from "../RecentArticle";
 
-function Recent({ className = "" }) {
+function Recent({ articles }) {
   return (
-    <section className={`${styles.recent} ${className}`}>
+    <section className={`${styles.recent}`}>
       <div className={`${styles.recentTitle}`}>Recent News</div>
-      <RecentArticle />
+      <RecentArticle articles={articles} />
     </section>
   );
 }

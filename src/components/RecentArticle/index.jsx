@@ -1,13 +1,9 @@
 import styles from "./recentArticle.module.css";
 
-import { articles } from "../../data/data";
-
-const fourArticles = articles.slice(0, 4);
-
-function RecentArticle() {
+function RecentArticle({ articles }) {
   return (
     <div className={styles.recentArticle}>
-      {fourArticles.map((item) => {
+      {articles.map((item) => {
         return (
           <div className={styles.content} key={item.headline}>
             <p>{item.story.slice(0, 170)}...</p>

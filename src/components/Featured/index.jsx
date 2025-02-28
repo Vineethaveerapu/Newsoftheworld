@@ -7,7 +7,7 @@ function Featured({ featuredNews, featuredSports }) {
   return (
     <div className={styles.featured}>
       <Recent articles={featuredNews.slice(0, 4)} />
-      <Main article={featuredNews[4]} />
+      <Main article={featuredNews[featuredNews.length - 1]} />
       <Sports articles={featuredSports} />
     </div>
   );

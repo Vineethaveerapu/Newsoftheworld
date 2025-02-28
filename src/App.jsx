@@ -21,11 +21,15 @@ function App() {
   const sportThree = sportArticles.slice(0, 3);
 
   const featuredNews = [
-    ...worldArticles.slice(3, 6),
-    ...swedenArticles.slice(3, 6),
-    ...crimeArticles.slice(3, 6)
-  ];
-  const featuredSports = [...sportArticles.slice(4, 6)];
+    ...worldArticles.slice(3, -1),
+    ...swedenArticles.slice(3, -1),
+    ...crimeArticles.slice(3, -1),
+    ...entertainmentArticles.slice(3, -1)
+  ].sort(() => Math.random() - 0.5);
+
+  const featuredSports = [...sportArticles.slice(3, -1)].sort(
+    () => Math.random() - 0.5
+  );
 
   return (
     <div className={styles.app}>
