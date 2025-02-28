@@ -7,9 +7,7 @@ const fourArticles = articles.slice(0, 4);
 function RecentArticle() {
   return (
     <div className={styles.recentArticle}>
-      {fourArticles.map((item, index) => {
-        console.log("index", index);
-        console.log("item", item);
+      {fourArticles.map((item) => {
         return (
           <div className={styles.content} key={item.headline}>
             <p>{item.story.slice(0, 170)}...</p>

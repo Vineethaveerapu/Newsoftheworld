@@ -3,4 +3,7 @@
   flex-direction: row;
   justify-content: space-between;
   gap: 1rem;
+  border-bottom: solid 2px currentColor;
+  padding-bottom: 2rem;
+  margin-bottom: 3rem;
 }

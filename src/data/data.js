@@ -5,7 +5,7 @@ function Article(headline, deck, story, image, category) {
   this.image = image;
   this.category = category;
 }
-
+// cspell:disable
 const articles = [
   new Article(
     "Football Match Ends in Draw",
@@ -208,7 +208,8 @@ const getArticlesInCategory = (categoryName, random = false) => {
   return filteredArticles;
 };
 
-// const sportsArticles = getArticlesInCategory("sports", true);
+const sportsArticles = getArticlesInCategory("sport", true);
 // console.log("sportsArticles", sportsArticles);
 
-export { articles, getArticlesInCategory };
+export { articles, getArticlesInCategory, sportsArticles };
+export default articles;

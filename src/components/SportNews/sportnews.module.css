@@ -1,0 +1,22 @@
+.sportNews {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.content {
+  border-bottom: solid 1px currentColor;
+  margin-top: 1rem;
+}
+
+.sportsImage {
+  height: 218px;
+  overflow: hidden;
+  img {
+    max-width: 100%;
+    object-fit: cover;
+    height: auto;
+    width: 100%;
+  }
+}
