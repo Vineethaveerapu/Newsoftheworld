@@ -208,8 +208,6 @@ const getArticlesInCategory = (categoryName, random = false) => {
   return filteredArticles;
 };
 
-// console.log("sportArticles", sportArticles);
-
-export { articles, getArticlesInCategory };
+export { getArticlesInCategory };
 
 export default articles;
