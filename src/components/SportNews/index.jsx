@@ -1,6 +1,6 @@
 import styles from "./sportNews.module.css";
 
-function SportNews({ className }) {
+function SportNews({ className = "" }) {
   return <div className={`${styles.sportNews} ${className}`}>SportNews</div>;
 }
 

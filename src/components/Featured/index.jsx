@@ -1,7 +1,7 @@
 import styles from "./featured.module.css";
 import Main from "../Main";
 import Recent from "../Recent";
-import SportNews from "../SportNews";
+import Sports from "../Sports";
 import { getArticlesInCategory, articles } from "../../data/data";
 const random = true;
 
@@ -11,9 +11,9 @@ function Featured() {
   const featuredArticles = articles[1];
   return (
     <div className={styles.featured}>
-      <Recent className={styles.recent} articles={recentArticles} />
-      <Main className={styles.main} article={featuredArticles} />
-      <SportNews className={styles.sportNews} articles={sportArticles} />
+      <Recent articles={recentArticles} />
+      <Main article={featuredArticles} />
+      <Sports articles={sportArticles} />
     </div>
   );
 }

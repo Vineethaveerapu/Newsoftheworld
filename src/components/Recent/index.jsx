@@ -1,7 +1,7 @@
 import styles from "./recent.module.css";
 import RecentArticle from "../RecentArticle";
 
-function Recent({ className }) {
+function Recent({ className = "" }) {
   return (
     <section className={`${styles.recent} ${className}`}>
       <div className={`${styles.recentTitle}`}>Recent News</div>
