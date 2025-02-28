@@ -7,7 +7,7 @@ function Headlines() {
   return (
     <div className={styles.headlines}>
       {threeArticles.map((article) => (
-        <div key={article.id} className={styles.headline}>
+        <div key={article.headline} className={styles.headline}>
           {article.headline}
         </div>
       ))}
