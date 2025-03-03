@@ -1,4 +1,6 @@
 .navlink {
   display: flex;
   gap: 3rem;
+  color: white;
+  text-decoration: none;
 }
