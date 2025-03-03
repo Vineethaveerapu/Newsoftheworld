@@ -1,8 +1,11 @@
 import styles from "./main.module.css";
 import { getImageUrl } from "../../utils/functions";
 
-function Main({ article, className = "" }) {
+function Main(props) {
+  const { article, className = "" } = props;
+  // destructure
   const { headline, deck, story, image, category } = article;
+
   return (
     <div className={`${styles.main} ${className}`}>
       <div className={styles.card}>
