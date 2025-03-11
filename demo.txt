@@ -1,0 +1,45 @@
+How to solve the state problems
+States Needed
+
+----------------------------------------
+
+To show the articles of just one category:
+
+State = selectedCategory - default value is null
+
+New component that takes the selectedCategory as  prop:
+
+    component DisplayCategory = ( {categoryToDisplay}) = { ... }
+
+On Page Load;
+
+   if selected Category is null show home Page
+
+   if not null load <DisplayCategory categoryToDisplay={selectedCategory}
+
+To set the selectedCategory we need to allow the Navigation Items to set the selectedCategory state
+
+So we need to pass the setSelectedCategory function to the nav Items
+
+
+------------------------------------------------------------------------------
+
+To show all the details of one Article:
+
+State selectedArticle = default value null
+
+New component that takes the selectedArticle as  prop:
+
+DisplayArticle Component = ({articleToDisplay}) =>
+
+On Page Load;
+
+   if selectedArticle is null show home Page
+
+   if not null load <DisplayArticle articleToDisplay={selectedArticle}
+
+To set selectedArticle we need to allow the headlines of every article we already have to update the state
+
+This means we will need to pass the setSelectedArticle function down through several components - both children and grandchildren.
+
+

@@ -5,32 +5,18 @@ import BreakingNews from "./components/BreakingNews";
 import styles from "./app.module.css";
 import Featured from "./components/Featured";
 import CategoryNews from "./components/CategoryNews";
-import { getArticlesInCategory } from "./data/data";
+import {
+  worldArticles,
+  worldThree,
+  swedenThree,
+  crimeThree,
+  entertainmentThree,
+  sportThree,
+  featuredNews,
+  featuredSports
+} from "./data/data";
 
 function App() {
-  const sportArticles = getArticlesInCategory("sport", true);
-  const swedenArticles = getArticlesInCategory("sweden", true);
-  const crimeArticles = getArticlesInCategory("crime", true);
-  const worldArticles = getArticlesInCategory("world", true);
-  const entertainmentArticles = getArticlesInCategory("entertainment", true);
-
-  const worldThree = worldArticles.slice(0, 3);
-  const swedenThree = swedenArticles.slice(0, 3);
-  const crimeThree = crimeArticles.slice(0, 3);
-  const entertainmentThree = entertainmentArticles.slice(0, 3);
-  const sportThree = sportArticles.slice(0, 3);
-
-  const featuredNews = [
-    ...worldArticles.slice(3, -1),
-    ...swedenArticles.slice(3, -1),
-    ...crimeArticles.slice(3, -1),
-    ...entertainmentArticles.slice(3, -1)
-  ].sort(() => Math.random() - 0.5);
-
-  const featuredSports = [...sportArticles.slice(3, -1)].sort(
-    () => Math.random() - 0.5
-  );
-
   return (
     <div className={styles.app}>
       <Header />
