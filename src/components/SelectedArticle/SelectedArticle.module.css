@@ -1,0 +1,30 @@
+.selectedArticle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 0.5rem;
+  max-width: calc(33% - 10px);
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.selectedArticleContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .selectedArticleContainer {
+    flex-direction: row;
+  }
+}

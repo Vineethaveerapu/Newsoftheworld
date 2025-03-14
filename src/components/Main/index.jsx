@@ -2,12 +2,16 @@ import styles from "./main.module.css";
 import { getImageUrl } from "../../utils/functions";
 
 function Main(props) {
-  const { article, className = "" } = props;
+  const { article, className = "", setSelectedArticle } = props;
   // destructure
   const { headline, deck, story, image, category } = article;
 
   return (
-    <div className={`${styles.main} ${className}`}>
+    <a
+      href="#"
+      className={`${styles.main} ${className}`}
+      onClick={() => setSelectedArticle(article)}
+    >
       <div className={styles.card}>
         <div className={styles.cardImage}>
           <img src={getImageUrl(image)} alt={headline} />
@@ -21,7 +25,7 @@ function Main(props) {
           <div className={styles.cardAuthor}>{category}</div>
         </div>
       </div>
-    </div>
+    </a>
   );
 }
 

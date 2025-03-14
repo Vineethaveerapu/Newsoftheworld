@@ -17,32 +17,71 @@ import {
 } from "./data/data";
 import DisplayCategory from "./components/DisplayCategory";
 import { useState } from "react";
+import SelectedArticle from "./components/SelectedArticle";
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState(null);
+  const [selectedArticle, setSelectedArticle] = useState(null);
+
+  const renderMain = () => {
+    if (selectedArticle) {
+      return <SelectedArticle selectedArticle={selectedArticle} />;
+    }
+
+    if (selectedCategory) {
+      return (
+        <DisplayCategory
+          categoryToDisplay={selectedCategory}
+          setSelectedArticle={setSelectedArticle}
+        />
+      );
+    }
+
+    return (
+      <>
+        <BreakingNews
+          articles={worldArticles}
+          setSelectedArticle={setSelectedArticle}
+        />
+        <Featured
+          featuredNews={featuredNews.slice(0, 5)}
+          featuredSports={featuredSports.slice(0, 2)}
+          setSelectedArticle={setSelectedArticle}
+        />
+        <CategoryNews
+          title="world"
+          articles={worldThree}
+          setSelectedArticle={setSelectedArticle}
+        />
+        <CategoryNews
+          title="sweden"
+          articles={swedenThree}
+          setSelectedArticle={setSelectedArticle}
+        />
+        <CategoryNews
+          title="crime"
+          articles={crimeThree}
+          setSelectedArticle={setSelectedArticle}
+        />
+        <CategoryNews
+          title="entertainment"
+          articles={entertainmentThree}
+          setSelectedArticle={setSelectedArticle}
+        />
+        <CategoryNews
+          title="sport"
+          articles={sportThree}
+          setSelectedArticle={setSelectedArticle}
+        />
+      </>
+    );
+  };
 
   return (
     <div className={styles.app}>
       <Header />
       <NavBar setSelectedCategory={setSelectedCategory} />
-      <main className={styles.content}>
-        {selectedCategory ? (
-          <DisplayCategory categoryToDisplay={selectedCategory} />
-        ) : (
-          <>
-            <BreakingNews articles={worldArticles} />
-            <Featured
-              featuredNews={featuredNews.slice(0, 5)}
-              featuredSports={featuredSports.slice(0, 2)}
-            />
-            <CategoryNews title="world" articles={worldThree} />
-            <CategoryNews title="sweden" articles={swedenThree} />
-            <CategoryNews title="crime" articles={crimeThree} />
-            <CategoryNews title="entertainment" articles={entertainmentThree} />
-            <CategoryNews title="sport" articles={sportThree} />
-          </>
-        )}
-      </main>
+      <main className={styles.content}>{renderMain()}</main>
       <Footer />
     </div>
   );

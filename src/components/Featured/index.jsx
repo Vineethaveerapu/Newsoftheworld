@@ -3,12 +3,21 @@ import Main from "../Main";
 import Recent from "../Recent";
 import Sports from "../Sports";
 
-function Featured({ featuredNews, featuredSports }) {
+function Featured({ featuredNews, featuredSports, setSelectedArticle }) {
   return (
     <div className={styles.featured}>
-      <Recent articles={featuredNews.slice(0, 4)} />
-      <Main article={featuredNews[featuredNews.length - 1]} />
-      <Sports articles={featuredSports} />
+      <Recent
+        articles={featuredNews.slice(0, 4)}
+        setSelectedArticle={setSelectedArticle}
+      />
+      <Main
+        article={featuredNews[featuredNews.length - 1]}
+        setSelectedArticle={setSelectedArticle}
+      />
+      <Sports
+        articles={featuredSports}
+        setSelectedArticle={setSelectedArticle}
+      />
     </div>
   );
 }

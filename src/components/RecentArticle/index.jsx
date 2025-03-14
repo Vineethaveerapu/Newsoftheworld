@@ -1,14 +1,22 @@
 import styles from "./recentArticle.module.css";
 
-function RecentArticle({ articles }) {
+function RecentArticle({ articles, setSelectedArticle }) {
+  const handleClick = (article) => {
+    setSelectedArticle(article);
+  };
   return (
     <div className={styles.recentArticle}>
       {articles.map((item) => {
         return (
-          <div className={styles.content} key={item.headline}>
+          <a
+            href="#"
+            className={styles.content}
+            key={item.headline}
+            onClick={() => handleClick(item)}
+          >
             <p>{item.story.slice(0, 170)}...</p>
             <p>{item.category}</p>
-          </div>
+          </a>
         );
       })}
     </div>
