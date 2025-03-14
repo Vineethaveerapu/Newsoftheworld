@@ -11,6 +11,7 @@ const SelectedArticle = ({ selectedArticle }) => {
   return (
     <div className={styles.selectedArticleContainer}>
       <div key={selectedArticle.deck} className={styles.selectedArticle}>
+        <h2>{selectedArticle.headline}</h2>
         <img
           src={getImageUrl(selectedArticle.image)}
           alt={selectedArticle.headlines}
